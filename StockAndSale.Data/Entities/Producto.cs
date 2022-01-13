@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StockAndSale.Data.Entities
+{
+    public class Producto
+    {
+        public int Id { get; set; }
+        public string Estilo { get; set; }
+        public string Descripcion { get; set; }
+        public string Color { get; set; }
+        public string Talla { get; set; }
+        public string EtiquetasFila { get; set; }
+        public char Clasificacion { get; set; }
+        public string CodigoETC { get; set; }
+        public int CreatedBy { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public int ModifyBy { get; set; }
+        public DateTime ModifyDate { get; set; }
+        public bool IsActive { get; set; }
+
+        #region Navigation Properties
+        public virtual ProductoPrecio ProductoPrecio { get; set; }
+        #endregion
+    }
+}
